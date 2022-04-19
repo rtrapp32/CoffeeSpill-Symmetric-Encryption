@@ -258,6 +258,8 @@ def CTListHexify(CTList):
     return HexCTList
         
 def ChunkFileLoad(Infile):
+    #This function loads a File containing cipherText JSON information, and converts it into a list which is returned as
+    #PlainBytesList. 
     inputText = open( Infile, "r")
     PlainTextList = json.load(inputText)
     PlainBytesList = []
@@ -328,11 +330,5 @@ def Main():
     else:
         print("Invalid Selection, please input E for Encrypt or D for Decrypt")
 
-#First we get the plaintext and key
-#PlainText = input("Please Input a String to be encrypted: ")
-#PlainKey = input("Please enter a key: ")
 
-#CT = EncryptMode()
-
-#DecryptMode(CT)
 Main()
